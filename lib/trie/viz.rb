@@ -3,10 +3,10 @@
 require 'trie/viz/version'
 ##
 # Main module
-module Trie
+module TrieViz
   ##
   # Visualization class
-  class Viz
+  class Diagram
     def initialize; end
   end
 end

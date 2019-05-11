@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-RSpec.describe Trie::Viz do
+RSpec.describe TrieViz do
   it 'has a version number' do
-    expect(Trie::Viz::VERSION).not_to be nil
+    expect(TrieViz::VERSION).not_to be nil
   end
 
   it 'true should be true' do

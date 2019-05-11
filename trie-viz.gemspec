@@ -6,7 +6,7 @@ require 'trie/viz/version'
 
 Gem::Specification.new do |spec|
   spec.name          = 'trie-viz'
-  spec.version       = Trie::Viz::VERSION
+  spec.version       = TrieViz::VERSION
   spec.authors       = ['Sergey Bezugliy']
   spec.email         = ['s.bezugliy@gmail.com']
 
