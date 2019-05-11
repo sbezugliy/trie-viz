@@ -1,0 +1,23 @@
+%form{:name => "data", :id => "email", :action => "/dictionary", :method => "post", :enctype => "text/plain"}
+  %fieldset
+    %ol
+      %li
+        %p
+          %b Format of dictioanry:
+        %div 
+          Space separated words use '\ ' to escape spaces that should not be delimiters
+          %p 
+            Example: 
+            %p
+              one two three two\ thousands
+          %p 
+            will be interpretted as:
+            %p{style:}
+              ["one", "two", "three", "two thousands"]
+      %li
+        %label{:for => "data[dictionary]"} Dictionary:
+        %textarea{:name => "data[dictionary]", :class => "text"}
+      %li
+        %label{:for => "data[text]"} Text:
+        %textarea{:name => "data[text]", :class => "text"}
+    %input{:type => "submit", :value => "Send", :class => "button"}
