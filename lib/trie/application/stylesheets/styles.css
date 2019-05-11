@@ -2,3 +2,10 @@
   padding-left: 16px;
   font-weight: bold;
 }
+
+.crop {
+  width: 80%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100px;
+}

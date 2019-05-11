@@ -27,11 +27,15 @@ class Web < Sinatra::Base
   end
 
   post '/dictionary' do
+    image_name = 'trie.png'
+    diagram_path = File.join(settings.public_folder, 'images', image_name)
     dictionary = dict_to_arr(params[:dictionary])
     pp dictionary
     tss = TSS::Trie.new(dictionary, :full)
 
     inclusions = tss.parse(params[:text]) if params[:text]
+
+    TrieViz::Diagram.new(tss.root, diagram_path)
 
     haml :'/result', locals: {
       data: {
@@ -39,6 +43,7 @@ class Web < Sinatra::Base
         text: params[:text]
       },
       result: {
+        diagram_path: 'images/' + image_name,
         inclusions: inclusions
       }
     }

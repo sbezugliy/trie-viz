@@ -3,12 +3,17 @@
   %dl 
     %dt 
       Dictionary:
-    %dd 
+    %dd.crop
       #{locals[:data][:dictionary]}
+      %br
     %dt 
       Text:      
-    %dd 
+    %dd.crop
       #{locals[:data][:text]}
-
-  %p 
-    #{locals[:result][:inclusions]}
+    %br
+    %dt
+      Result:
+    %dd.crop
+      #{locals[:result][:inclusions]}
+  %br 
+  %img{src: locals[:result][:diagram_path]}
