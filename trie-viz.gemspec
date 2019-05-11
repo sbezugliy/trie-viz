@@ -45,8 +45,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'pry', '~> 0.12'
   spec.add_development_dependency 'rake', '~> 10.0'
   spec.add_development_dependency 'rspec', '~> 3.0'
-  spec.add_development_dependency 'rspec-benchmark', '~> 0.5.0'
-  spec.add_development_dependency 'rspec-collection_matchers', '~> 1.1.0'
   spec.add_development_dependency 'rubocop', '~> 0.67.0'
   spec.add_development_dependency 'rubocop-performance', '~> 1.1.0'
   spec.add_development_dependency 'ruby-graphviz', '~> 1.2.4'
