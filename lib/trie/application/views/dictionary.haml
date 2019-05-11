@@ -1,23 +1,27 @@
-%form{:name => "data", :action => "/dictionary", :method => "post", :enctype => "text/plain"}
+%form{  action: "/dictionary", method: "POST"}
   %fieldset
-    %ol
+    %ul
       %li
         %p
           %b Format of dictioanry:
-        %div 
-          Space separated words use '\ ' to escape spaces that should not be delimiters
-          %p 
+          %p Space separated words. Use '\ ' to escape spaces that should not to be delimiters.
+        %dl 
+          %dt 
             Example: 
-          %p.sub_text
-            one two three ninety\ nine
-          %p 
+          %dd
+            %b
+              one two three ninety\ nine
+          %dt
             will be interpretted as:
-          %p.sub_text
-            ["one", "two", "three", "ninety nine"]
+          %dd
+            %b
+              ["one", "two", "three", "ninety nine"]
       %li
-        %label{:for => "data[dictionary]"} Dictionary:
-        %textarea{:name => "data[dictionary]", :class => "text"}
+        %label{for: "dictionary"} Dictionary:
+        %br
+        %textarea.text{name: "dictionary", rows: 5, cols: 150}
       %li
-        %label{:for => "data[text]"} Text:
-        %textarea{:name => "data[text]", :class => "text"}
-    %input{:type => "submit", :value => "Send", :class => "button"}
+        %label{for: "text"} Text:
+        %br
+        %textarea.text{name: "text", rows: 5, cols: 150}
+    %input.button{type: "submit", value: "Execute"}

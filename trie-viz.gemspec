@@ -52,5 +52,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'simplecov', '~> 0.16.0'
   spec.add_development_dependency 'simplecov-console', '~> 0.4.0'
   spec.add_development_dependency 'sinatra', '~> 2.0.5'
+  spec.add_development_dependency 'sinatra-contrib', '~> 2.0.5'
   spec.add_development_dependency 'trie-substring-search', '~> 0.1.0.0'
 end
