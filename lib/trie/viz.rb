@@ -1,0 +1,12 @@
+# frozen_string_literal: true
+
+require 'trie/viz/version'
+##
+# Main module
+module Trie
+  ##
+  # Vizualization class
+  class Viz
+    def initialize; end
+  end
+end
