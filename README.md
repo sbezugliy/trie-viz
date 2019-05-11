@@ -35,6 +35,12 @@ Or install it yourself as:
 
 ## Usage
 
+```
+    bundle exec ./bin/server
+```
+
+Open http://localhost:4567/ in your browser
+
 ## Development
 
 ## Contributing
