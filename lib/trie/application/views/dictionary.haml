@@ -8,12 +8,12 @@
           Space separated words use '\ ' to escape spaces that should not be delimiters
           %p 
             Example: 
-            %p
-              one two three two\ thousands
+          %p.sub_text
+            one two three ninety\ nine
           %p 
             will be interpretted as:
-            %p{style:}
-              ["one", "two", "three", "two thousands"]
+          %p.sub_text
+            ["one", "two", "three", "ninety nine"]
       %li
         %label{:for => "data[dictionary]"} Dictionary:
         %textarea{:name => "data[dictionary]", :class => "text"}

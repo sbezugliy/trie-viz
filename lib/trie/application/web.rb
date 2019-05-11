@@ -21,8 +21,9 @@ class Web < Sinatra::Base
     haml :'/dictionary'
   end
 
-  get '/dictionary' do
+  post '/dictionary' do
     pp params
+    haml :'/result'
   end
 
 end
