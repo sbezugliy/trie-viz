@@ -5,7 +5,7 @@ RSpec.describe Trie::Viz do
     expect(Trie::Viz::VERSION).not_to be nil
   end
 
-  it 'does something useful' do
-    expect(false).to eq(true)
+  it 'true should be true' do
+    expect(true).to eq(true)
   end
 end

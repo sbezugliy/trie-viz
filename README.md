@@ -5,14 +5,14 @@
 Install graphviz:
 
 ```
-    # Debian, Ubuntu, etc...
-    sudo apt-get install graphviz
+# Debian, Ubuntu, etc...
+sudo apt-get install graphviz
 
-    # Arch
-    sudo pacman -S graphviz
+# Arch
+sudo pacman -S graphviz
 
-    # RedHat, etc...
-    sudo yum install graphviz
+# RedHat, etc...
+sudo yum install graphviz
 ```
 
 Add this line to your application's Gemfile:
