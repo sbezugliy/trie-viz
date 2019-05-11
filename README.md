@@ -1,5 +1,9 @@
 # Trie::Viz
 
+[![Build Status](https://cloud.drone.io/api/badges/sbezugliy/trie-viz/status.svg)](https://cloud.drone.io/sbezugliy/trie-viz)
+
+[![codecov](https://codecov.io/gh/sbezugliy/trie-viz/branch/master/graph/badge.svg)](https://codecov.io/gh/sbezugliy/trie-viz)
+
 ## Installation
 
 Install graphviz:
