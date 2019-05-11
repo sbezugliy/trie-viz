@@ -5,7 +5,7 @@ require 'trie/viz/version'
 # Main module
 module Trie
   ##
-  # Vizualization class
+  # Visualization class
   class Viz
     def initialize; end
   end
