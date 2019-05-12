@@ -1,7 +1,6 @@
-#!/usr/bin/env ruby
-# frozen_string_literal: true
-
-require 'bundler/setup'
+$:.unshift File.expand_path("../", __FILE__)
+require 'rubygems'
+require 'sinatra'
 require 'trie/viz'
 
 require 'trie/application/web'
