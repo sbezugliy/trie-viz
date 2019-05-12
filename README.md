@@ -4,6 +4,8 @@
 
 [![codecov](https://codecov.io/gh/sbezugliy/trie-viz/branch/master/graph/badge.svg)](https://codecov.io/gh/sbezugliy/trie-viz)
 
+Running website: https://trie-viz.herokuapp.com
+
 ## Installation
 
 Install graphviz:
