@@ -21,7 +21,7 @@ steps:
       - name: bundle
         path: /usr/local/bundle
     commands:
-      - bundle exec rspec
+      - rspec
 
 volumes:
   - name: bundle
