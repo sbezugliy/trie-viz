@@ -9,6 +9,18 @@
   %body
     = if !settings.flash.empty? 
       %p.warning "#{settings.flash[:message]}"
+    %nav.purple.darken-4
+      %div.nav-wrapper
+        %a.brand-logo.right{ href: "/"}Trie Text Analyzer
+        %ul.left.hide-on-med-and-down#nav-mobile
+          %li 
+            %a{ href: "/" } Home
+          %li 
+            %a{ href: "https://codenv.top" } Codenv.top
+          %li
+            %a{ href: "https://github.com/sbezugliy/trie-viz" } Github
+          %li
+            %a{ href: "https://cloud.drone.io/sbezugliy/trie-viz" } CI status
     %div.main
       %div.container
         = yield
