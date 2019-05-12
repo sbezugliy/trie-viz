@@ -9,3 +9,10 @@
   overflow-x: hidden;
   height: 100px;
 }
+
+.warning {
+  background-color: yellow;
+  margin: 8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}

@@ -15,5 +15,16 @@
       Result:
     %dd.crop
       #{locals[:result][:inclusions]}
-  %br 
+  %br
+  %dl 
+    Execution time:
+    %dt 
+      Trie build:
+    %dd
+      #{locals[:benchmark][:build]}
+    %dt 
+      Text parse:
+    %dd
+      #{locals[:benchmark][:parse]}
+  %br
   %img{src: locals[:result][:diagram_path]}

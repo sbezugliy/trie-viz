@@ -4,18 +4,23 @@
       %li
         %p
           %b Format of dictioanry:
-          %p Space separated words. Use '\\ ' to escape spaces that should not to be delimiters.
+          %p Semicolon separated words. Use '\;' to escape semicolons that should not to be delimiters.
         %dl 
           %dt 
             Example: 
           %dd
             %b
-              one two three ninety\\ nine
+              one two three ninety\ nine
           %dt
             will be interpretted as:
           %dd
             %b
               ["one", "two", "three", "ninety nine"]
+      %li
+        %select{name: "type"} 
+          %option{selected: :full, include_blank: false} Full 
+          %option{selected: :flat, include_blank: false} Flat 
+        %br
       %li
         %label{for: "dictionary"} Dictionary:
         %br

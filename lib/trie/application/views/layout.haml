@@ -4,4 +4,10 @@
     %title= "Tries"
     %link{rel: "stylesheet", href: 'stylesheets/styles.css'}
   %body
+    = if !settings.flash.empty? 
+      %p.warning "#{settings.flash[:message]}"
+      
     = yield
+
+    %div
+      Sergey Bezugliy &copy; 2019
