@@ -33,6 +33,10 @@ class Web < Sinatra::Base
     haml :'/index'
   end
 
+  get '/principals' do
+    haml :'/principals'
+  end
+
   get '/dictionary' do
     haml :'/dictionary'
   end
