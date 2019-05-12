@@ -2,7 +2,13 @@ PATH
   remote: .
   specs:
     trie-viz (0.1.0)
+      bundler (~> 2.0.1)
+      haml (~> 5.0.4)
       rack (~> 2.0.7)
+      rake (~> 10.0)
+      sinatra (~> 2.0.5)
+      sinatra-contrib (~> 2.0.5)
+      trie-substring-search (~> 0.1.0.0)
 
 GEM
   remote: https://rubygems.org/
