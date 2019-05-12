@@ -1,31 +1,29 @@
 %h1 Results
 %div
-  %dl 
-    %dt 
-      Dictionary:
-    %dd.crop
-      #{locals[:data][:dictionary]}
-      %br
-    %dt 
-      Text:      
-    %dd.crop
-      #{locals[:data][:text]}
+  %b
+    Dictionary:
+  %blockquote.crop
+    #{locals[:data][:dictionary]}
     %br
-    %dt
-      Result:
-    %dd.crop
-      #{locals[:result][:inclusions]}
+  %b
+    Text:      
+  %blockquote.crop
+    #{locals[:data][:text]}
+  %br
+  %b
+    Result:
+  %blockquote.crop
+    #{locals[:result][:inclusions]}
   %br
 %div
-  %dl 
-    Execution time:
-    %dt 
-      Trie build:
-    %dd
-      #{locals[:benchmark][:build]}
-    %dt 
-      Text parse:
-    %dd
-      #{locals[:benchmark][:parse]}
-%div.graph
-  %img{src: locals[:result][:diagram_path]}
+  %h2 Execution time:
+  %b Trie build:
+  %blockquote
+    #{locals[:benchmark][:build]}
+  %b Text parse:
+  %blockquote
+    #{locals[:benchmark][:parse]}
+%div
+  %h2 Trie diagram
+  %div.center
+    %img{src: locals[:result][:diagram_path]}

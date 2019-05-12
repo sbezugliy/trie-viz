@@ -10,7 +10,9 @@
     = if !settings.flash.empty? 
       %p.warning "#{settings.flash[:message]}"
     %div.main
-      = yield
+      %div.container
+        = yield
+      %br
     %footer.page-footer.purple.darken-4
       %div.footer-copyright
         %div.container.center
