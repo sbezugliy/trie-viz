@@ -22,15 +22,17 @@ module TrieViz
 
     def build
       @graph = GraphViz.new(:G, type: :digraph)
+      @graph.node[label: "<root>"]
       add_row(@trie)
       @graph.output(png: @image_path)
     end
 
     def add_row(vertex)
       vertex.children.each do |vertex|
-        @graph.add_nodes(vertex.char)
+        p = @graph.add_nodes(vertex.char)
         vertex.children.each do |vertex2|
-          @graph.add_nodes(vertex2.char)
+          c = @graph.add_nodes(vertex2.char)
+          @graph.add_edges(p, c)
           add_row(vertex2)
         end
       end
