@@ -22,19 +22,20 @@ module TrieViz
 
     def build
       @graph = GraphViz.new(:G, type: :digraph)
-      @graph.node[label: "<root>"]
-      add_row(@trie)
+      root = @graph.add_nodes("<root>")
+      @trie.children.each do |vertex|
+        p = @graph.add_nodes(vertex.char)
+        @graph.add_edges(root, p)
+        add_row(p, vertex)
+      end
       @graph.output(png: @image_path)
     end
 
-    def add_row(vertex)
-      vertex.children.each do |vertex|
-        p = @graph.add_nodes(vertex.char)
-        vertex.children.each do |vertex2|
-          c = @graph.add_nodes(vertex2.char)
-          @graph.add_edges(p, c)
-          add_row(vertex2)
-        end
+    def add_row(node, vertex)
+      vertex.children.each do |vertex2|
+        c = @graph.add_nodes(vertex2.char)
+        @graph.add_edges(node, c)
+        add_row(c, vertex2)
       end
     end
   end
