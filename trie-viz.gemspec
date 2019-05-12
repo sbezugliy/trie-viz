@@ -44,6 +44,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'codecov', '~> 0.1'
   spec.add_development_dependency 'haml', '~> 5.0.4'
   spec.add_development_dependency 'pry', '~> 0.12'
+  spec.add_development_dependency 'rack', '~> 2.0.7'
   spec.add_development_dependency 'rake', '~> 10.0'
   spec.add_development_dependency 'rspec', '~> 3.0'
   spec.add_development_dependency 'rubocop', '~> 0.67.0'
@@ -54,5 +55,4 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'sinatra', '~> 2.0.5'
   spec.add_development_dependency 'sinatra-contrib', '~> 2.0.5'
   spec.add_development_dependency 'trie-substring-search', '~> 0.1.0.0'
-  spec.add_development_dependency 'rack', '~> 2.0.7'
 end

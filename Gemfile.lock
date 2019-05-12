@@ -110,5 +110,8 @@ DEPENDENCIES
   trie-substring-search (~> 0.1.0.0)
   trie-viz!
 
+RUBY VERSION
+   ruby 2.6.1p33
+
 BUNDLED WITH
    1.17.3
