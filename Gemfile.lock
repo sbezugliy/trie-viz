@@ -2,6 +2,7 @@ PATH
   remote: .
   specs:
     trie-viz (0.1.0)
+      rake (~> 10.0)
 
 GEM
   remote: https://rubygems.org/
@@ -98,7 +99,6 @@ DEPENDENCIES
   haml (~> 5.0.4)
   pry (~> 0.12)
   rack (~> 2.0.7)
-  rake (~> 10.0)
   rspec (~> 3.0)
   rubocop (~> 0.67.0)
   rubocop-performance (~> 1.1.0)
