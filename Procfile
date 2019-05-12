@@ -1,1 +1,1 @@
-web: rackup -p $PORT config.ru -E $RACK_ENV
+web: bundle exec bin/rackup -p $PORT config.ru -E $RACK_ENV
