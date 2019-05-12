@@ -6,6 +6,7 @@ PATH
       haml (~> 5.0.4)
       rack (~> 2.0.7)
       rake (~> 10.0)
+      ruby-graphviz (~> 1.2.4)
       sinatra (~> 2.0.5)
       sinatra-contrib (~> 2.0.5)
       trie-substring-search (~> 0.1.0.0)

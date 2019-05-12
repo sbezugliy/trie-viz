@@ -59,6 +59,7 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency 'haml', '~> 5.0.4'
   spec.add_runtime_dependency 'rack', '~> 2.0.7'
   spec.add_runtime_dependency 'rake', '~> 10.0'
+  spec.add_runtime_dependency 'ruby-graphviz', '~> 1.2.4'
   spec.add_runtime_dependency 'sinatra', '~> 2.0.5'
   spec.add_runtime_dependency 'sinatra-contrib', '~> 2.0.5'
   spec.add_runtime_dependency 'trie-substring-search', '~> 0.1.0.0'
