@@ -40,19 +40,19 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
 
-  spec.add_development_dependency 'bundler', '~> 2.0.1'
   spec.add_development_dependency 'codecov', '~> 0.1'
-  spec.add_development_dependency 'haml', '~> 5.0.4'
   spec.add_development_dependency 'pry', '~> 0.12'
   spec.add_development_dependency 'rspec', '~> 3.0'
   spec.add_development_dependency 'rubocop', '~> 0.67.0'
   spec.add_development_dependency 'rubocop-performance', '~> 1.1.0'
-  spec.add_development_dependency 'ruby-graphviz', '~> 1.2.4'
   spec.add_development_dependency 'simplecov', '~> 0.16.0'
   spec.add_development_dependency 'simplecov-console', '~> 0.4.0'
-  spec.add_development_dependency 'sinatra', '~> 2.0.5'
-  spec.add_development_dependency 'sinatra-contrib', '~> 2.0.5'
-  spec.add_development_dependency 'trie-substring-search', '~> 0.1.0.0'
+  spec.add_runtime_dependency 'bundler', '~> 2.0.1'
+  spec.add_runtime_dependency 'haml', '~> 5.0.4'
   spec.add_runtime_dependency 'rack', '~> 2.0.7'
   spec.add_runtime_dependency 'rake', '~> 10.0'
+  spec.add_runtime_dependency 'ruby-graphviz', '~> 1.2.4'
+  spec.add_runtime_dependency 'sinatra', '~> 2.0.5'
+  spec.add_runtime_dependency 'sinatra-contrib', '~> 2.0.5'
+  spec.add_runtime_dependency 'trie-substring-search', '~> 0.1.0.0'
 end
