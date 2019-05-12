@@ -21,7 +21,7 @@ steps:
       - name: bundle
         path: /usr/local/bundle
     commands:
-      - bundle exec rake
+      - bundle exec rspec
 
 volumes:
   - name: bundle
