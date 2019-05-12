@@ -3,11 +3,18 @@
   %head
     %title= "Tries"
     %link{rel: "stylesheet", href: 'stylesheets/styles.css'}
+    %link{rel: "stylesheet", href: "stylesheets/materialize.min.css"}
+    %script{src: "javascripts/jquery-3.4.1.min.js"}
+    %script{src: "javascripts/materialize.min.js"}
   %body
     = if !settings.flash.empty? 
       %p.warning "#{settings.flash[:message]}"
-      
-    = yield
-
-    %div
-      Sergey Bezugliy &copy; 2019
+    %div.main
+      = yield
+    %footer.page-footer.purple.darken-4
+      %div.footer-copyright
+        %div.container.center
+          Sergey Bezugliy &copy; 2019
+          %br
+          s.bezugliy@gmail.com
+    %script{src: "javascripts/init.js"}

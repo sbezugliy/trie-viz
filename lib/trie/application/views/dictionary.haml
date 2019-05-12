@@ -1,4 +1,4 @@
-%form{  action: "/dictionary", method: "POST"}
+%form{  }
   %fieldset
     %ul
       %li
@@ -16,17 +16,20 @@
           %dd
             %b
               ["one", "two", "three", "ninety; nine"]
-      %li
-        %select{name: "type"} 
-          %option{selected: :full, include_blank: false} Full 
-          %option{selected: :flat, include_blank: false} Flat 
-        %br
-      %li
-        %label{for: "dictionary"} Dictionary:
-        %br
-        %textarea.text{name: "dictionary", rows: 5, cols: 150}
-      %li
-        %label{for: "text"} Text:
-        %br
-        %textarea.text{name: "text", rows: 5, cols: 150}
-    %input.button{type: "submit", value: "Execute"}
+%div.row
+  %form.col.s12{ action: "/dictionary", method: "POST" }
+    %div.row
+      %div.input-field.col.s12
+        %select{name: "type" } 
+          %option{selected: :full, selected: true} Full 
+          %option{selected: :flat, disabled: true} Flat 
+          %option{selected: :flat, disabled: true} Aho-Corasick 
+        %label Type of trie
+    %div.row
+      %div.input-field.col.s6
+        %textarea.materialize-textarea{placeholder: "Dictionary", id: "dictionary", name: "dictionary", rows: 5, cols: 150}
+        %label{ for: "dictionary" } Dictionary
+      %div.input-field.col.s6
+        %textarea.materialize-textarea{placeholder: "Text", id: "text", name: "text", rows: 5, cols: 150}
+        %label{ for: "text" } Text
+    %input.waves-effect.waves-light.btn{ type: "submit", value: "Execute" }

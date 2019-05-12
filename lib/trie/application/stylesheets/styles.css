@@ -1,3 +1,14 @@
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
 .sub_text {
   padding-left: 16px;
   font-weight: bold;
