@@ -16,6 +16,7 @@
     %dd.crop
       #{locals[:result][:inclusions]}
   %br
+%div
   %dl 
     Execution time:
     %dt 
@@ -26,5 +27,5 @@
       Text parse:
     %dd
       #{locals[:benchmark][:parse]}
-  %br
+%div.graph
   %img{src: locals[:result][:diagram_path]}
