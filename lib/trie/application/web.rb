@@ -7,6 +7,7 @@ require 'trie/viz'
 require 'haml'
 require 'benchmark'
 
+configure { set :server, :puma }
 ##
 # Web application starter class
 class Web < Sinatra::Base
