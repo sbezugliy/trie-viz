@@ -22,7 +22,7 @@ steps:
         path: /usr/local/bundle
     commands:
       - apt-get update
-      - apt-get install -y libnss3
+      - apt-get install -y libnss3 chromium open-jdk
       - rspec
 
 volumes:
