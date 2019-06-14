@@ -21,7 +21,6 @@ steps:
       - name: bundle
         path: /usr/local/bundle
     commands:
-      - apt-get install -y libnss
       - rspec
 
 volumes:
