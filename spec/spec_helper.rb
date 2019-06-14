@@ -19,17 +19,6 @@ ENV['RACK_ENV'] = 'test'
 
 Capybara.app = Web
 
-Capybara.register_driver :selenium do |app|
-  Capybara::Selenium::Driver.new(app, browser: :chrome)
-end
-
-Capybara.javascript_driver = :selenium
-
-Capybara.configure do |config|
-  config.default_max_wait_time = 10 # seconds
-  config.default_driver        = :selenium
-end
-
 Webdrivers.install_dir = 'tmp/.webdrivers'
 # Chrome
 Webdrivers::Chromedriver.required_version = '2.46'
@@ -37,6 +26,27 @@ Webdrivers::Chromedriver.required_version = '2.46'
 Webdrivers::Geckodriver.required_version  = '0.23.0'
 # Internet Explorer
 Webdrivers::IEdriver.required_version     = '3.14.0'
+
+
+Capybara.register_driver :selenium do |app|
+  Capybara::Selenium::Driver.new(app, browser: :chrome)
+end
+Capybara.register_driver :headless_chrome do |app|
+  capabilities = Selenium::WebDriver::Remote::Capabilities.chrome(
+    chromeOptions: { args: %w(headless disable-gpu) }
+  )
+
+  Capybara::Selenium::Driver.new app,
+    browser: :chrome,
+    desired_capabilities: capabilities
+end
+
+Capybara.javascript_driver = :headless_chrome
+
+Capybara.configure do |config|
+  config.default_max_wait_time = 10 # seconds
+  config.default_driver        = ENV["GUI"] ? :selenium : :headless_chrome
+end
 
 RSpec.configure do |config|
   config.include RSpecMixin
