@@ -33,7 +33,7 @@ Capybara.register_driver :selenium do |app|
 end
 Capybara.register_driver :headless_chrome do |app|
   capabilities = Selenium::WebDriver::Remote::Capabilities.chrome(
-    chromeOptions: { args: %w(headless disable-gpu) }
+    chromeOptions: { args: %w(headless disable-gpu no-sandbox disable-dev-shm-usage') }
   )
 
   Capybara::Selenium::Driver.new app,
