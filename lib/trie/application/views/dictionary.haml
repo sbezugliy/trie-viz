@@ -1,6 +1,6 @@
 %h1 Trie builder
-%div
-  %b Format of dictioanry:
+%div.legend
+  %h2 Format of dictionary:
   %p Semicolon separated words. Use '\;' to escape semicolons that should not to be delimiters.
   %p Example: 
   %blockquote
@@ -9,9 +9,9 @@
   %blockquote
     ["one", "two", "three", "ninety; nine"]
 %div.row
-  %form.col.s12{ action: "/dictionary", method: "POST" }
+  %form#analyzer-form.col.s12{ action: "/dictionary", method: "POST" }
     %div.row
-      %div.input-field.col.s12
+      %div#dictionary-type.input-field.col.s12
         %select{name: "type" } 
           %option{value: :full, selected: true} Full 
           %option{value: :flat, disabled: true} Flat 
@@ -19,9 +19,9 @@
         %label Type of trie
     %div.row
       %div.input-field.col.s6
-        %textarea.materialize-textarea{placeholder: "Dictionary", id: "dictionary", name: "dictionary", rows: 5, cols: 150}
+        %textarea#dictionary-data.materialize-textarea{placeholder: "Dictionary", id: "dictionary", name: "dictionary", rows: 5, cols: 150}
         %label{ for: "dictionary" } Dictionary
       %div.input-field.col.s6
-        %textarea.materialize-textarea{placeholder: "Text", id: "text", name: "text", rows: 5, cols: 150}
+        %textarea#analyzer-text.materialize-textarea{placeholder: "Text", id: "text", name: "text", rows: 5, cols: 150}
         %label{ for: "text" } Text
-    %input.waves-effect.waves-light.btn{ type: "submit", value: "Execute" }
+    %input#analyzer-submit.waves-effect.waves-light.btn{ type: "submit", value: "Execute" }

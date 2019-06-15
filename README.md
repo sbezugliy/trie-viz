@@ -35,7 +35,22 @@ Or install it yourself as:
 
     $ gem install trie-viz
 
-## Usage
+
+
+## Run tests
+Foreground mode:
+
+```
+    GUI=true rspec
+```
+
+Background:
+
+```
+    rspec
+```
+
+## Run server
 
 ```
     bundle exec ./bin/server

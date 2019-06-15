@@ -9,6 +9,7 @@ require 'webdrivers'
 require 'trie/application/web'
 require 'rack/test' 
 require 'helpers/responsive_helpers'
+require 'helpers/form_helpers'
 module RSpecMixin
   include Rack::Test::Methods
   def app
@@ -53,6 +54,7 @@ RSpec.configure do |config|
   config.include Capybara::DSL
   config.include Capybara::RSpecMatchers
   config.include ResponsiveHelpers
+  config.include FormHelpers
 
   config.color = true
   config.example_status_persistence_file_path = '.rspec_status'
