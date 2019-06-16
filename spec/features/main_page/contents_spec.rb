@@ -3,7 +3,7 @@ require 'spec_helper.rb'
 RSpec.describe "Main page texts", type: :feature do
   
   before do
-    resize_window_to_default
+    ResponsiveHelpers.resize_window_to_default
   end
 
   before :each do
