@@ -22,7 +22,7 @@ steps:
         path: /usr/local/bundle
     commands:
       - apt-get update
-      - apt-get install -y libnss3 chromium openjdk-8-jdk
+      - apt-get install -y libnss3 chromium openjdk-8-jdk graphviz
       - rspec
 
 volumes:
