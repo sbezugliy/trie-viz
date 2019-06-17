@@ -12,6 +12,8 @@ require 'helpers/responsive_helpers'
 require 'helpers/expectations_helpers'
 require 'helpers/form_helpers'
 require 'test_cases/navbar_cases'
+require 'test_cases/footer_cases'
+
 module RSpecMixin
   include Rack::Test::Methods
   def app
@@ -59,6 +61,7 @@ RSpec.configure do |config|
   config.include FormHelpers
   config.include ExpectationsHelpers
   config.include NavbarCases
+  config.include FooterCases
 
   config.color = true
   config.example_status_persistence_file_path = '.rspec_status'

@@ -5,11 +5,6 @@ module NavbarCases
   
   extend self
 
-  TO_MOBILE      = lambda{resize_window_to_mobile}
-  TO_TABLET      = lambda{resize_window_to_tablet}
-  TO_DESKTOP     = lambda{resize_window_to_default}
-  TO_WIDE_SCREEN = lambda{resize_window_to_wide}
-
   def navbar_pages 
     ['/', '/dictionary']
   end

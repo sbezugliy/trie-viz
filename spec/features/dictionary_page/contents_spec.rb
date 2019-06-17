@@ -29,12 +29,4 @@ RSpec.describe "Dictionary page content", type: :feature do
     expect(legend).to have_content '["one", "two", "three", "ninety; nine"]'
   end
 
-  it "has expected texts at footer" do
-    footer = find("div.footer-copyright.center")
-    p_block = footer.find('p.white-text', visible: :all)
-    expect(p_block).to have_content 'Sergey Bezugliy © 2019'
-    expect(p_block).to have_content 's.bezugliy@gmail.com'
-    expect(footer.find('h5')).to have_content 'Trie UI'
-  end
-
 end
