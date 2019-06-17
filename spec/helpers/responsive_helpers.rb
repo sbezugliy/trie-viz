@@ -23,8 +23,8 @@ module ResponsiveHelpers
     resize_window_by(1920, 1080)
   end
 
-  def build_case_header(name, before_hook, after_hook)
-    {name: 'on mobile',
+  def build_case(name, before_hook, after_hook)
+    {name: name,
     before_hook: before_hook,
     after_hook: after_hook}.merge(block_given? ? yield : {} )
   end

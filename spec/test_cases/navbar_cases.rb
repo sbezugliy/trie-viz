@@ -11,7 +11,7 @@ module NavbarCases
 
   def navbar_cases 
     [
-      build_case_header('on mobile', TO_MOBILE, TO_DESKTOP) {{
+      build_case('on mobile', TO_MOBILE, TO_DESKTOP) {{
         links:{
           'Home': { visible: false },
           'Codenv.top': { visible: false },
@@ -19,7 +19,7 @@ module NavbarCases
           'CI status': { visible: false }
         }
       }},
-      build_case_header('on tablet', TO_TABLET, TO_DESKTOP) {{
+      build_case('on tablet', TO_TABLET, TO_DESKTOP) {{
         links: {
           'Home': { visible: false },
           'Codenv.top': { visible: false },
@@ -27,7 +27,7 @@ module NavbarCases
           'CI status': { visible: false }
         }
       }},
-      build_case_header('on desktop', TO_DESKTOP, TO_DESKTOP) {{
+      build_case('on desktop', TO_DESKTOP, TO_DESKTOP) {{
         links: {
           'Home': { visible: :all, path: '/' },
           'Codenv.top': { visible: :all, url: 'https://codenv.top/' },
@@ -35,7 +35,7 @@ module NavbarCases
           'CI status': { visible: :all, url: 'https://cloud.drone.io/sbezugliy/trie-viz' }
         }
       }},
-      build_case_header('on wide screen', TO_WIDE_SCREEN, TO_DESKTOP) {{
+      build_case('on wide screen', TO_WIDE_SCREEN, TO_DESKTOP) {{
         links: {
           'Home': { visible: true, path: '/' },
           'Codenv.top': { visible: :all, url: 'https://codenv.top/' },
@@ -59,10 +59,10 @@ module NavbarCases
     }
  
     [
-      build_case_header('on mobile', TO_MOBILE, TO_DESKTOP){{ styles: common_styles }},
-			build_case_header('on tablet', TO_TABLET, TO_DESKTOP){{ styles: common_styles }},
-			build_case_header('on desktop', TO_DESKTOP, TO_DESKTOP){{ styles: common_styles }},
-			build_case_header('on wide screen', TO_WIDE_SCREEN, TO_DESKTOP){{ styles: common_styles }}
+      build_case('on mobile', TO_MOBILE, TO_DESKTOP){{ styles: common_styles }},
+			build_case('on tablet', TO_TABLET, TO_DESKTOP){{ styles: common_styles }},
+			build_case('on desktop', TO_DESKTOP, TO_DESKTOP){{ styles: common_styles }},
+			build_case('on wide screen', TO_WIDE_SCREEN, TO_DESKTOP){{ styles: common_styles }}
     ] 
   end
 end

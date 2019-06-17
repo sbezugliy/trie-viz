@@ -2,7 +2,7 @@ require 'spec_helper.rb'
 
 RSpec.describe "HTML header on different screens", type: :feature do
   ContentCases.content_pages.each do |test_path|
-    describe "for #{test_path}", type: :feature do
+    describe "for page at #{test_path}", type: :feature do
       before :each do
         visit test_path
       end
