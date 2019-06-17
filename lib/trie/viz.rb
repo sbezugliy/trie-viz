@@ -22,7 +22,7 @@ module TrieViz
 
     def build
       @graph = GraphViz.new(:G, type: :digraph)
-      root = @graph.add_nodes("<root>")
+      root = @graph.add_nodes('<root>')
       @trie.children.each do |vertex|
         p = @graph.add_nodes(vertex.char)
         @graph.add_edges(root, p)

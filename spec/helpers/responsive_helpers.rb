@@ -1,11 +1,12 @@
-module ResponsiveHelpers
+# frozen_string_literal: true
 
+module ResponsiveHelpers
   extend self
 
-  TO_MOBILE      = lambda{resize_window_to_mobile}
-  TO_TABLET      = lambda{resize_window_to_tablet}
-  TO_DESKTOP     = lambda{resize_window_to_default}
-  TO_WIDE_SCREEN = lambda{resize_window_to_wide}
+  TO_MOBILE      = -> { resize_window_to_mobile }
+  TO_TABLET      = -> { resize_window_to_tablet }
+  TO_DESKTOP     = -> { resize_window_to_default }
+  TO_WIDE_SCREEN = -> { resize_window_to_wide }
 
   def resize_window_to_mobile
     resize_window_by(640, 480)
@@ -24,16 +25,16 @@ module ResponsiveHelpers
   end
 
   def build_case(name, before_hook, after_hook)
-    {name: name,
-    before_hook: before_hook,
-    after_hook: after_hook}.merge(block_given? ? yield : {} )
+    { name: name,
+      before_hook: before_hook,
+      after_hook: after_hook }.merge(block_given? ? yield : {})
   end
 
   private
 
   def resize_window_by(width, height)
     return unless Capybara.current_session.driver.browser.respond_to? 'manage'
-    Capybara.current_session.driver.browser.manage.window.resize_to(width, height) 
-  end
 
+    Capybara.current_session.driver.browser.manage.window.resize_to(width, height)
+  end
 end

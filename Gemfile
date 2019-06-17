@@ -5,4 +5,4 @@ source 'https://rubygems.org'
 # Specify your gem's dependencies in trie-viz.gemspec
 gemspec
 
-ruby "2.6.1"
+ruby '2.6.1'

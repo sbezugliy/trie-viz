@@ -1,7 +1,8 @@
-require 'spec_helper.rb' 
+# frozen_string_literal: true
 
-RSpec.describe "Principals page texts", type: :feature do
-  
+require 'spec_helper.rb'
+
+RSpec.describe 'Principals page texts', type: :feature do
   before do
     ResponsiveHelpers.resize_window_to_default
   end
@@ -10,7 +11,7 @@ RSpec.describe "Principals page texts", type: :feature do
     visit '/principals'
   end
 
-  it "has expected texts" do
+  it 'has expected texts' do
     find('h1', text: 'To be done...', visible: :all).visible?
   end
 end

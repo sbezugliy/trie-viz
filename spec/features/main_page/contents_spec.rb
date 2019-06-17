@@ -1,7 +1,8 @@
-require 'spec_helper.rb' 
+# frozen_string_literal: true
 
-RSpec.describe "Main page texts", type: :feature do
-  
+require 'spec_helper.rb'
+
+RSpec.describe 'Main page texts', type: :feature do
   before do
     ResponsiveHelpers.resize_window_to_default
   end
@@ -10,10 +11,10 @@ RSpec.describe "Main page texts", type: :feature do
     visit '/'
   end
 
-  it "has expected texts" do
+  it 'has expected texts' do
     find('h1', text: 'Trie substring search UI', visible: :all).visible?
   end
-  
+
   it "has button 'Dictionary analyzis' to visualizer page" do
     find_link('Dictionary analyzis').click
     expect(current_path).to eq('/dictionary')

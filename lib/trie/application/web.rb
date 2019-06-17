@@ -82,6 +82,6 @@ class Web < Sinatra::Base
   private
 
   def dict_to_arr(dict)
-    dict.split(/(?<!\\); /).map{|s| s.gsub('\\;', ';')}
+    dict.split(/(?<!\\); /).map { |s| s.gsub('\\;', ';') }
   end
 end

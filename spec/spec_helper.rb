@@ -3,11 +3,11 @@
 require 'bundler/setup'
 require 'trie/viz'
 require 'simplecov'
-require 'capybara' 
+require 'capybara'
 require 'capybara/rspec'
 require 'webdrivers'
 require 'trie/application/web'
-require 'rack/test' 
+require 'rack/test'
 require 'helpers/responsive_helpers'
 require 'helpers/expectations_helpers'
 require 'helpers/form_helpers'
@@ -18,7 +18,7 @@ require 'test_cases/content_cases'
 module RSpecMixin
   include Rack::Test::Methods
   def app
-    Web    
+    Web
   end
 end
 ENV['RACK_ENV'] = 'test'
@@ -33,26 +33,25 @@ Webdrivers::Geckodriver.required_version  = '0.23.0'
 # Internet Explorer
 Webdrivers::IEdriver.required_version     = '3.14.0'
 
-
 Capybara.register_driver :selenium do |app|
   Capybara::Selenium::Driver.new(app, browser: :chrome)
 end
 
 Capybara.register_driver :headless_chrome do |app|
   capabilities = Selenium::WebDriver::Remote::Capabilities.chrome(
-    chromeOptions: { args: %w(headless disable-gpu no-sandbox disable-dev-shm-usage') }
+    chromeOptions: { args: %w[headless disable-gpu no-sandbox disable-dev-shm-usage'] }
   )
 
   Capybara::Selenium::Driver.new app,
-    browser: :chrome,
-    desired_capabilities: capabilities
+                                 browser: :chrome,
+                                 desired_capabilities: capabilities
 end
 
 Capybara.javascript_driver = :headless_chrome
 
 Capybara.configure do |config|
   config.default_max_wait_time = 10 # seconds
-  config.default_driver        = ENV["GUI"] ? :selenium : :headless_chrome
+  config.default_driver        = ENV['GUI'] ? :selenium : :headless_chrome
 end
 
 RSpec.configure do |config|
@@ -74,9 +73,7 @@ RSpec.configure do |config|
   config.order = :random
   config.warnings = true
 
-  if config.files_to_run.one?
-    config.default_formatter = 'doc'
-  end
+  config.default_formatter = 'doc' if config.files_to_run.one?
 
   config.expect_with :rspec do |c|
     c.syntax = :expect
