@@ -6,7 +6,7 @@ module ContentCases
   extend self
 
   def content_pages 
-    ['/', '/dictionary']
+    ['/', '/dictionary', '/principals']
   end
 
   def content_cases 

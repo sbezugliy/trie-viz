@@ -6,7 +6,7 @@ module NavbarCases
   extend self
 
   def navbar_pages 
-    ['/', '/dictionary']
+    ['/', '/dictionary', '/principals']
   end
 
   def navbar_cases 
@@ -45,7 +45,7 @@ module NavbarCases
       }}
     ]
   end
-
+  ['/', '/dictionary']
   def navbar_styles_cases 
     common_styles = {
       'nav': {

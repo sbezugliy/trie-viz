@@ -6,7 +6,7 @@ module FooterCases
   extend self
 
   def footer_pages 
-    ['/', '/dictionary']
+    ['/', '/dictionary', '/principals']
   end
 
   def footer_cases 
