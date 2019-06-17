@@ -11,23 +11,10 @@ module FooterCases
 
   def footer_cases 
     [
-      {
-        name: 'on mobile',
-        before_hook: TO_MOBILE,
-        after_hook: TO_DESKTOP
-      },{
-        name: 'on tablet',
-        before_hook: TO_TABLET,
-        after_hook: TO_DESKTOP
-      },{
-        name: 'on desktop',
-        before_hook: TO_DESKTOP,
-        after_hook: TO_DESKTOP
-      },{
-        name: 'on wide screen',
-        before_hook: TO_WIDE_SCREEN,
-        after_hook: TO_DESKTOP
-      }
+      build_case_header('on mobile', TO_MOBILE, TO_DESKTOP),
+			build_case_header('on tablet', TO_TABLET, TO_DESKTOP),
+			build_case_header('on desktop', TO_DESKTOP, TO_DESKTOP),
+			build_case_header('on wide screen', TO_WIDE_SCREEN, TO_DESKTOP)
     ]
   end
 end

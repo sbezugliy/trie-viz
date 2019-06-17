@@ -11,47 +11,58 @@ module NavbarCases
 
   def navbar_cases 
     [
-      {
-        name: 'on mobile',
-        before_hook: TO_MOBILE,
-        after_hook: TO_DESKTOP,
-        links: {
-            'Home': { visible: false },
-            'Codenv.top': { visible: false },
-            'Github': { visible: false },
-            'CI status': { visible: false }
+      build_case_header('on mobile', TO_MOBILE, TO_DESKTOP) {{
+        links:{
+          'Home': { visible: false },
+          'Codenv.top': { visible: false },
+          'Github': { visible: false },
+          'CI status': { visible: false }
         }
-      },{
-        name: 'on tablet',
-        before_hook: TO_TABLET,
-        after_hook: TO_DESKTOP,
+      }},
+      build_case_header('on tablet', TO_TABLET, TO_DESKTOP) {{
         links: {
-            'Home': { visible: false },
-            'Codenv.top': { visible: false },
-            'Github': { visible: false },
-            'CI status': { visible: false }
+          'Home': { visible: false },
+          'Codenv.top': { visible: false },
+          'Github': { visible: false },
+          'CI status': { visible: false }
         }
-      },{
-        name: 'on desktop',
-        before_hook: TO_DESKTOP,
-        after_hook: TO_DESKTOP,
+      }},
+      build_case_header('on desktop', TO_DESKTOP, TO_DESKTOP) {{
         links: {
-            'Home': { visible: :all, path: '/' },
-            'Codenv.top': { visible: :all, url: 'https://codenv.top/' },
-            'Github': { visible: :all, url: 'https://github.com/sbezugliy/trie-viz' },
-            'CI status': { visible: :all, url: 'https://cloud.drone.io/sbezugliy/trie-viz' }
+          'Home': { visible: :all, path: '/' },
+          'Codenv.top': { visible: :all, url: 'https://codenv.top/' },
+          'Github': { visible: :all, url: 'https://github.com/sbezugliy/trie-viz' },
+          'CI status': { visible: :all, url: 'https://cloud.drone.io/sbezugliy/trie-viz' }
         }
-      },{
-        name: 'on wide screen',
-        before_hook: TO_WIDE_SCREEN,
-        after_hook: TO_DESKTOP,
+      }},
+      build_case_header('on wide screen', TO_WIDE_SCREEN, TO_DESKTOP) {{
         links: {
-            'Home': { visible: true, path: '/' },
-            'Codenv.top': { visible: :all, url: 'https://codenv.top/' },
-            'Github': { visible: :all, url: 'https://github.com/sbezugliy/trie-viz' },
-            'CI status': { visible: :all, url: 'https://cloud.drone.io/sbezugliy/trie-viz' }
+          'Home': { visible: true, path: '/' },
+          'Codenv.top': { visible: :all, url: 'https://codenv.top/' },
+          'Github': { visible: :all, url: 'https://github.com/sbezugliy/trie-viz' },
+          'CI status': { visible: :all, url: 'https://cloud.drone.io/sbezugliy/trie-viz' }
         }
-      }
+      }}
     ]
+  end
+
+  def navbar_styles_cases 
+    common_styles = {
+      'nav': {
+        'height': '64px',
+        'background-color': 'rgba(74, 20, 140, 1)',
+        'color': 'rgba(255, 255, 255, 1)',
+      },
+      'div.nav-wrapper': {
+        'height': '64px'
+      }      
+    }
+ 
+    [
+      build_case_header('on mobile', TO_MOBILE, TO_DESKTOP){{ styles: common_styles }},
+			build_case_header('on tablet', TO_TABLET, TO_DESKTOP){{ styles: common_styles }},
+			build_case_header('on desktop', TO_DESKTOP, TO_DESKTOP){{ styles: common_styles }},
+			build_case_header('on wide screen', TO_WIDE_SCREEN, TO_DESKTOP){{ styles: common_styles }}
+    ] 
   end
 end

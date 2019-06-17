@@ -18,12 +18,12 @@ RSpec.describe "Footer on different screens", type: :feature do
         end
 
         it "has expected texts at footer" do
-            footer = find("div.footer-copyright.center")
-            p_block = footer.find('p.white-text', visible: :all)
-            expect(p_block).to have_content 'Sergey Bezugliy © 2019'
-            expect(p_block).to have_content 's.bezugliy@gmail.com'
-            expect(footer.find('h5')).to have_content 'Trie UI'
-          end
+          footer = find("div.footer-copyright.center")
+          p_block = footer.find('p.white-text', visible: :all)
+          expect(p_block).to have_content 'Sergey Bezugliy © 2019'
+          expect(p_block).to have_content 's.bezugliy@gmail.com'
+          expect(footer.find('h5')).to have_content 'Trie UI'
+        end
       end
     end
   end

@@ -13,6 +13,7 @@ require 'helpers/expectations_helpers'
 require 'helpers/form_helpers'
 require 'test_cases/navbar_cases'
 require 'test_cases/footer_cases'
+require 'test_cases/content_cases'
 
 module RSpecMixin
   include Rack::Test::Methods
@@ -36,6 +37,7 @@ Webdrivers::IEdriver.required_version     = '3.14.0'
 Capybara.register_driver :selenium do |app|
   Capybara::Selenium::Driver.new(app, browser: :chrome)
 end
+
 Capybara.register_driver :headless_chrome do |app|
   capabilities = Selenium::WebDriver::Remote::Capabilities.chrome(
     chromeOptions: { args: %w(headless disable-gpu no-sandbox disable-dev-shm-usage') }
@@ -62,6 +64,7 @@ RSpec.configure do |config|
   config.include ExpectationsHelpers
   config.include NavbarCases
   config.include FooterCases
+  config.include ContentCases
 
   config.color = true
   config.example_status_persistence_file_path = '.rspec_status'
