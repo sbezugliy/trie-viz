@@ -3,9 +3,9 @@
 require 'spec_helper.rb'
 
 RSpec.describe 'Footer on different screens', type: :feature do
-  FooterCases.footer_pages.each do |test_path|
+  FooterCases.pages.each do |test_path|
     describe "for page at #{test_path}", type: :feature do
-      FooterCases.footer_cases.each do |test_case|
+      FooterCases.content.each do |test_case|
         describe "#{test_case[:name]} ", type: :feature do
           before do
             test_case[:before_hook].call

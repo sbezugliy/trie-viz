@@ -5,13 +5,13 @@ require 'helpers/responsive_helpers'
 module ContentCases
   include ResponsiveHelpers
 
-  module_function
-
-  def content_pages
+  extend self
+  
+  def pages
     ['/', '/dictionary', '/principals']
   end
 
-  def content_cases
+  def content
     [
       build_case('on mobile', TO_MOBILE, TO_DESKTOP),
       build_case('on tablet', TO_TABLET, TO_DESKTOP),
@@ -20,7 +20,7 @@ module ContentCases
     ]
   end
 
-  def content_styles_cases
+  def styles
     common_styles = {
 
     }

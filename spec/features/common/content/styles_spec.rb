@@ -3,8 +3,8 @@
 require 'spec_helper.rb'
 
 RSpec.describe 'Contnet container on different screens', type: :feature do
-  ContentCases.content_pages.each do |test_path|
-    ContentCases.content_styles_cases.each do |test_case|
+  ContentCases.pages.each do |test_path|
+    ContentCases.styles.each do |test_case|
       before do
         test_case[:before_hook].call
       end

@@ -1,8 +1,9 @@
 # frozen_string_literal: true
 
 module ResponsiveHelpers
+  
   extend self
-
+  
   TO_MOBILE      = -> { resize_window_to_mobile }
   TO_TABLET      = -> { resize_window_to_tablet }
   TO_DESKTOP     = -> { resize_window_to_default }

@@ -5,13 +5,13 @@ require 'helpers/responsive_helpers'
 module FooterCases
   include ResponsiveHelpers
 
-  module_function
+  extend self
 
-  def footer_pages
+  def pages
     ['/', '/dictionary', '/principals']
   end
 
-  def footer_cases
+  def content
     [
       build_case('on mobile', TO_MOBILE, TO_DESKTOP),
       build_case('on tablet', TO_TABLET, TO_DESKTOP),

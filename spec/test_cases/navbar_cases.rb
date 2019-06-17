@@ -5,13 +5,13 @@ require 'helpers/responsive_helpers'
 module NavbarCases
   include ResponsiveHelpers
 
-  module_function
+  extend self
 
-  def navbar_pages
+  def pages
     ['/', '/dictionary', '/principals']
   end
 
-  def navbar_cases
+  def content
     [
       build_case('on mobile', TO_MOBILE, TO_DESKTOP) do
         {
@@ -55,8 +55,8 @@ module NavbarCases
       end
     ]
   end
-  ['/', '/dictionary']
-  def navbar_styles_cases
+
+  def styles
     common_styles = {
       'nav': {
         'height': '64px',

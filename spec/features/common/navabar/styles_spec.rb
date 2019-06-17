@@ -3,9 +3,9 @@
 require 'spec_helper.rb'
 
 RSpec.describe 'Navbar styles on different screens', type: :feature do
-  NavbarCases.navbar_pages.each do |test_path|
+  NavbarCases.pages.each do |test_path|
     describe "for page at #{test_path}", type: :feature do
-      NavbarCases.navbar_styles_cases.each do |test_case|
+      NavbarCases.styles.each do |test_case|
         describe "#{test_case[:name]} ", type: :feature do
           before do
             test_case[:before_hook].call
