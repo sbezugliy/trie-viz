@@ -2,14 +2,13 @@
 
 require 'helpers/responsive_helpers'
 
+# Content test helpers
 module ContentCases
   include ResponsiveHelpers
 
-  extend self
-  
-  def pages
-    ['/', '/dictionary', '/principals']
-  end
+  module_function
+
+  PAGES = ['/', '/dictionary', '/principals']
 
   def content
     [
@@ -20,48 +19,39 @@ module ContentCases
     ]
   end
 
-  def styles
-    common_styles = {
+  def common_styles
+    {}
+  end
 
-    }
+  def mobile_screen
+    build_case('on mobile', TO_MOBILE, TO_DESKTOP) do
+      { styles: common_styles.merge(
+        'div.container': { 'max-width': '640px' }
+      ) }
+    end
+  end
 
-    [
-      build_case('on mobile', TO_MOBILE, TO_DESKTOP) do
-        {
-          styles: common_styles.merge(
-            'div.container': {
-              'max-width': '1280px'
-            }
-          )
-        }
-      end,
-      build_case('on tablet', TO_TABLET, TO_DESKTOP) do
-        {
-          styles: common_styles.merge(
-            'div.container': {
-              'max-width': '1280px'
-            }
-          )
-        }
-      end,
-      build_case('on desktop', TO_DESKTOP, TO_DESKTOP) do
-        {
-          styles: common_styles.merge(
-            'div.container': {
-              'max-width': '1280px'
-            }
-          )
-        }
-      end,
-      build_case('on wide screen', TO_WIDE_SCREEN, TO_DESKTOP) do
-        {
-          styles: common_styles.merge(
-            'div.container': {
-              'max-width': '1280px'
-            }
-          )
-        }
-      end
-    ]
+  def tablet_screen
+    build_case('on tablet', TO_TABLET, TO_DESKTOP) do
+      { styles: common_styles.merge(
+        'div.container': { 'max-width': '960px' }
+      ) }
+    end
+  end
+
+  def desktop_screen
+    build_case('on desktop', TO_DESKTOP, TO_DESKTOP) do
+      { styles: common_styles.merge(
+        'div.container': { 'max-width': '1280px' }
+      ) }
+    end
+  end
+
+  def wide_screen
+    build_case('on wide screen', TO_WIDE_SCREEN, TO_DESKTOP) do
+      { styles: common_styles.merge(
+        'div.container': { 'max-width': '1920px' }
+      ) }
+    end
   end
 end

@@ -20,7 +20,7 @@ class Web < Sinatra::Base
   set :public_folder, File.expand_path(__dir__)
 
   set :views, File.expand_path('views', __dir__)
-  set :haml, format: :html5
+  set :slim, format: :html
 
   set :results, {}
 
@@ -30,19 +30,19 @@ class Web < Sinatra::Base
     settings.flash = {}
   end
 
-  get '/' do
-    haml :'/index'
+  get '/', provides: :html do
+    slim(:index).to_s
   end
 
-  get '/principals' do
-    haml :'/principals'
+  get '/principals', provides: :html do
+    slim :principals
   end
 
-  get '/dictionary' do
-    haml :'/dictionary'
+  get '/dictionary', provides: :html do
+    slim :dictionary
   end
 
-  post '/dictionary' do
+  post '/dictionary', provides: :html do
     image_name = 'trie.png'
     diagram_path = File.join(settings.public_folder, 'images', image_name)
     dictionary = dict_to_arr(params[:dictionary])
@@ -58,11 +58,11 @@ class Web < Sinatra::Base
 
     @results = {
       data: {
-        dictionary: dictionary,
+        dictionary:,
         text: params[:text]
       },
       result: {
-        diagram_path: 'images/' + image_name,
+        diagram_path: "images/#{image_name}",
         inclusions: @inclusions
       },
       benchmark: {
@@ -70,11 +70,10 @@ class Web < Sinatra::Base
         parse: bm_parse
       }
     }
-    haml :'/result', locals: @results
+    slim :'/result', locals: @results
   rescue RuntimeError => e
-    pp e.message
     settings.flash[:message] = "#{e.class}. Please check fields"
-    haml :'/dictionary', locals: {
+    slim :dictionary, locals: {
       results: @results
     }
   end

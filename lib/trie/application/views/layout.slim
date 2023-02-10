@@ -1,0 +1,41 @@
+doctype html
+html
+  head
+    title Tries
+    link rel="stylesheet" href='stylesheets/styles.css'
+    link rel="stylesheet" href="stylesheets/materialize.min.css"
+    script src="javascripts/jquery-3.4.1.min.js"
+    script src="javascripts/materialize.min.js"
+    meta charset="UTF-8"
+    meta name="title" content="Trie UI"
+    meta name="description" content="Trie Text Analyzer"
+    meta name="author" content="Sergey Bezugliy"
+  body
+    = if !settings.flash.empty? 
+      p.warning = settings.flash[:message]
+    nav.purple.darken-4
+      div.nav-wrapper
+        a.brand-logo.right href="/" Trie Text Analyzer
+        ul.left.hide-on-med-and-down#nav-mobile
+          li 
+            a href="/" Home
+          li 
+            a href="https://codenv.top" Codenv.top
+          li
+            a href="https://github.com/sbezugliy/trie-viz" Github
+          li
+            a href="https://cloud.drone.io/sbezugliy/trie-viz" CI status
+    div.main
+      div.container == yield
+      br
+    footer.page-footer.purple.darken-4
+      h5.white-text.center Trie UI
+      div.footer-copyright
+        p.white-text.left
+          a.left href="https://codenv.top" https://codenv.top
+          br
+          | s.bezugliy@gmail.com
+          br
+          | s.bezugliy@codenv.top
+        p.white-text.center   Sergey Bezugliy &copy; 2019 - #{Time.now.year}
+    script src="javascripts/init.js"
