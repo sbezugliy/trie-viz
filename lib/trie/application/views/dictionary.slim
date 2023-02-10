@@ -1,0 +1,27 @@
+h1 Trie builder
+div.legend
+  h2 Format of dictionary:
+  p Semicolon separated words. Use '\;' to escape semicolons that should not to be delimiters.
+  p Example: 
+  blockquote 
+    | one; two; three; ninety\; nine
+  p will be interpretted as:
+  blockquote 
+    | ["one", "two", "three", "ninety; nine"]  
+div.row
+  form#analyzer-form.col.s12 action="/dictionary" method="POST"
+    div.row
+      div#dictionary-type.input-field.col.s12
+        select name="type"
+          option value="full" selected=true "Full" 
+          option value="flat" disabled=true "Flat" 
+          option value="ac" disabled=true "Aho-Corassick"
+        label Type of trie
+    div.row
+      div.input-field.col.s6
+        label for="dictionary" Dictionary
+        input.materialize-textarea type="text" id="dictionary" name="dictionary" rows=5 cols=150
+      div.input-field.col.s6
+        label for="text" Text
+        input.materialize-textarea type="text" id="text" name="text" rows=5 cols=150
+    input#analyzer-submit.waves-effect.waves-light.btn type="submit" value="Execute"

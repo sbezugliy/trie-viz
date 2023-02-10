@@ -10,50 +10,51 @@ Running website: https://trie-viz.herokuapp.com
 
 Install graphviz:
 
-```
+```shell
 # Debian, Ubuntu, etc...
-sudo apt-get install graphviz
+$ sudo apt-get install graphviz
 
 # Arch
 sudo pacman -S graphviz
 
 # RedHat, etc...
-sudo yum install graphviz
+$ sudo yum install graphviz
 ```
 
 Add this line to your application's Gemfile:
 
 ```ruby
-    gem 'trie-viz'
+gem 'trie-viz'
 ```
 
 And then execute:
 
-    $ bundle
-
+```shell
+$ bundle
+```
 Or install it yourself as:
-
-    $ gem install trie-viz
-
+```shell
+$ gem install trie-viz
+```
 
 
 ## Run tests
 Foreground mode:
 
-```
-    GUI=true rspec
+```shell
+$ GUI=true rspec
 ```
 
 Background:
 
-```
-    rspec
+```shell
+$ rspec
 ```
 
 ## Run server
 
-```
-    bundle exec ./bin/server
+```shell
+$ bundle exec./bin / server
 ```
 
 Open http://localhost:4567/ in your browser

@@ -2,10 +2,11 @@
 
 require 'helpers/responsive_helpers'
 
+# Footer test helpers
 module FooterCases
   include ResponsiveHelpers
 
-  extend self
+  module_function
 
   def pages
     ['/', '/dictionary', '/principals']

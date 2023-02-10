@@ -8,9 +8,7 @@ module TrieViz
   ##
   # Visualization class
   class Diagram
-    attr_reader :trie
-    attr_reader :graph
-    attr_reader :image_path
+    attr_reader :trie, :graph, :image_path
 
     def initialize(trie, image_path)
       @trie = trie

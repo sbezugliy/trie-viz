@@ -31,3 +31,12 @@ main {
 .graph {
   margin-left: 240px;
 }
+
+.btn {
+  margin: 8px;
+}
+
+.footer-copyright {
+  padding-left: 64px !important;
+  padding-right: 64px !important;
+}

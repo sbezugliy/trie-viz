@@ -1,0 +1,21 @@
+h1 Results
+div
+  b Dictionary:
+  blockquote.crop = locals[:data][:dictionary]
+  br
+  b Text:      
+  blockquote.crop = locals[:data][:text]
+  br
+  b Result:
+  blockquote.crop = locals[:result][:inclusions]
+  br
+div
+  h2 Execution time:
+  b Trie build:
+  blockquote == locals[:benchmark][:build]
+  b Text parse:
+  blockquote == locals[:benchmark][:parse]
+div
+  h2 Trie diagram
+  div.center
+    img src=locals[:result][:diagram_path]
