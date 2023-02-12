@@ -1,0 +1,46 @@
+# Logfile created on 2023-02-12 23:55:14 +0200 by logger.rb/v1.5.3
+[2023-02-12 23:55:14 +0200 Sergejs-iMac.local (80937)] INFO : Starting the New Relic agent version 8.16.0 in "development" environment.
+[2023-02-12 23:55:14 +0200 Sergejs-iMac.local (80937)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2023-02-12 23:55:14 +0200 Sergejs-iMac.local (80937)] INFO : Reading configuration from newrelic.yml (/Users/sergey_bezugliy/workspace_codenv.top/trie-viz)
+[2023-02-12 23:55:14 +0200 Sergejs-iMac.local (80937)] INFO : Environment: development
+[2023-02-12 23:55:14 +0200 Sergejs-iMac.local (80937)] INFO : No known dispatcher detected.
+[2023-02-12 23:55:14 +0200 Sergejs-iMac.local (80937)] INFO : Application: trie-viz (Development)
+[2023-02-12 23:55:14 +0200 Sergejs-iMac.local (80937)] INFO : Installing Logger instrumentation
+[2023-02-12 23:55:14 +0200 Sergejs-iMac.local (80937)] INFO : Installing New Relic supported Logger instrumentation using Prepend
+[2023-02-12 23:55:14 +0200 Sergejs-iMac.local (80937)] INFO : Installing Net:HTTP Wrappers
+[2023-02-12 23:55:14 +0200 Sergejs-iMac.local (80937)] INFO : Installing New Relic supported NetHTTP instrumentation using Prepend
+[2023-02-12 23:55:14 +0200 Sergejs-iMac.local (80937)] INFO : Installing Thread Instrumentation
+[2023-02-12 23:55:14 +0200 Sergejs-iMac.local (80937)] INFO : Installing New Relic supported MonitoredThread instrumentation using Prepend
+[2023-02-12 23:55:14 +0200 Sergejs-iMac.local (80937)] INFO : Finished instrumentation
+[2023-02-12 23:55:15 +0200 Sergejs-iMac.local (80937)] INFO : Starting Agent shutdown
+[2023-02-12 23:55:17 +0200 Sergejs-iMac.local (80937)] INFO : Reporting to: https://rpm.eu.newrelic.com/accounts/3812663/applications/496398756
+[2023-02-12 23:55:58 +0200 Sergejs-iMac.local (81471)] INFO : Starting the New Relic agent version 8.16.0 in "development" environment.
+[2023-02-12 23:55:58 +0200 Sergejs-iMac.local (81471)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2023-02-12 23:55:58 +0200 Sergejs-iMac.local (81471)] INFO : Reading configuration from newrelic.yml (/Users/sergey_bezugliy/workspace_codenv.top/trie-viz)
+[2023-02-12 23:55:58 +0200 Sergejs-iMac.local (81471)] INFO : Environment: development
+[2023-02-12 23:55:58 +0200 Sergejs-iMac.local (81471)] INFO : No known dispatcher detected.
+[2023-02-12 23:55:58 +0200 Sergejs-iMac.local (81471)] INFO : Application: trie-viz (Development)
+[2023-02-12 23:55:59 +0200 Sergejs-iMac.local (81471)] INFO : Installing Logger instrumentation
+[2023-02-12 23:55:59 +0200 Sergejs-iMac.local (81471)] INFO : Installing New Relic supported Logger instrumentation using Prepend
+[2023-02-12 23:55:59 +0200 Sergejs-iMac.local (81471)] INFO : Installing Net:HTTP Wrappers
+[2023-02-12 23:55:59 +0200 Sergejs-iMac.local (81471)] INFO : Installing New Relic supported NetHTTP instrumentation using Prepend
+[2023-02-12 23:55:59 +0200 Sergejs-iMac.local (81471)] INFO : Installing Thread Instrumentation
+[2023-02-12 23:55:59 +0200 Sergejs-iMac.local (81471)] INFO : Installing New Relic supported MonitoredThread instrumentation using Prepend
+[2023-02-12 23:55:59 +0200 Sergejs-iMac.local (81471)] INFO : Finished instrumentation
+[2023-02-12 23:55:59 +0200 Sergejs-iMac.local (81471)] INFO : Starting Agent shutdown
+[2023-02-12 23:56:01 +0200 Sergejs-iMac.local (81471)] INFO : Reporting to: https://rpm.eu.newrelic.com/accounts/3812663/applications/496398756
+[2023-02-12 23:56:21 +0200 Sergejs-iMac.local (81746)] INFO : Starting the New Relic agent version 8.16.0 in "development" environment.
+[2023-02-12 23:56:21 +0200 Sergejs-iMac.local (81746)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2023-02-12 23:56:21 +0200 Sergejs-iMac.local (81746)] INFO : Reading configuration from newrelic.yml (/Users/sergey_bezugliy/workspace_codenv.top/trie-viz)
+[2023-02-12 23:56:21 +0200 Sergejs-iMac.local (81746)] INFO : Environment: development
+[2023-02-12 23:56:21 +0200 Sergejs-iMac.local (81746)] INFO : No known dispatcher detected.
+[2023-02-12 23:56:21 +0200 Sergejs-iMac.local (81746)] INFO : Application: trie-viz (Development)
+[2023-02-12 23:56:21 +0200 Sergejs-iMac.local (81746)] INFO : Installing Logger instrumentation
+[2023-02-12 23:56:21 +0200 Sergejs-iMac.local (81746)] INFO : Installing New Relic supported Logger instrumentation using Prepend
+[2023-02-12 23:56:21 +0200 Sergejs-iMac.local (81746)] INFO : Installing Net:HTTP Wrappers
+[2023-02-12 23:56:21 +0200 Sergejs-iMac.local (81746)] INFO : Installing New Relic supported NetHTTP instrumentation using Prepend
+[2023-02-12 23:56:21 +0200 Sergejs-iMac.local (81746)] INFO : Installing Thread Instrumentation
+[2023-02-12 23:56:21 +0200 Sergejs-iMac.local (81746)] INFO : Installing New Relic supported MonitoredThread instrumentation using Prepend
+[2023-02-12 23:56:21 +0200 Sergejs-iMac.local (81746)] INFO : Finished instrumentation
+[2023-02-12 23:56:23 +0200 Sergejs-iMac.local (81746)] INFO : Reporting to: https://rpm.eu.newrelic.com/accounts/3812663/applications/496398756
+[2023-02-12 23:56:54 +0200 Sergejs-iMac.local (81746)] INFO : Starting Agent shutdown
