@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Capybara expectations helpers
 module ExpectationsHelpers
   def expect_current_link_by_state(state)
     return expect(current_url).to eq(state[:url]) if state.key? :url

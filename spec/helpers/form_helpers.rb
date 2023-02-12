@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Capybara form helpers
 module FormHelpers
   def find_form(selector = '')
     page.find('body')

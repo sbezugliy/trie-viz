@@ -8,7 +8,7 @@ module ContentCases
 
   module_function
 
-  PAGES = ['/', '/dictionary', '/principals']
+  PAGES = ['/', '/dictionary', '/principals'].freeze
 
   def content
     [

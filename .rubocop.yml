@@ -14,3 +14,8 @@ Metrics/BlockLength:
   Max: 250
   Include:
     - spec/**/*_spec.rb
+
+Style/Documentation:
+  Enabled: true
+  Exclude:
+    - spec/**/*_spec.rb

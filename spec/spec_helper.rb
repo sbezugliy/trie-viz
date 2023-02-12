@@ -15,6 +15,7 @@ require 'test_cases/navbar_cases'
 require 'test_cases/footer_cases'
 require 'test_cases/content_cases'
 
+# Wrapper for Sinatra tests
 module RSpecMixin
   include Rack::Test::Methods
   def app

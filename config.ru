@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-ENV["RACK_ENV"] ||= "development"
+ENV['RACK_ENV'] ||= 'development'
 
 $LOAD_PATH.unshift File.expand_path(__dir__)
 require 'rubygems'

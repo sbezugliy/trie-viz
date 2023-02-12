@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
+# Capybara viewport helpers
 module ResponsiveHelpers
-
   TO_MOBILE      = -> { resize_window_to_mobile }
   TO_TABLET      = -> { resize_window_to_tablet }
   TO_DESKTOP     = -> { resize_window_to_default }
