@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'newrelic_rpm'
-
 require 'trie/viz/version'
 require 'graphviz'
 ##
