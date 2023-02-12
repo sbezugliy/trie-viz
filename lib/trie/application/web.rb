@@ -40,7 +40,6 @@ class Web < Sinatra::Base
 
   get '/dictionary', provides: :html do
     slim :dictionary
-    raise "Test newrelic"
   end
 
   get '/render_3d', provides: :html do
