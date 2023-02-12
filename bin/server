@@ -6,5 +6,7 @@ require 'trie/viz'
 
 require 'trie/application/web'
 
+env["RACK_ENV"] |= "development"
+
 puts 'Trie grafviz web ui is starting...'
 Web.run!

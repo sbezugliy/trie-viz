@@ -51,5 +51,6 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency 'sinatra'
   spec.add_runtime_dependency 'sinatra-contrib'
   spec.add_runtime_dependency 'trie-substring-search'
+  spec.add_runtime_dependency 'newrelic_rpm'
   spec.metadata['rubygems_mfa_required'] = 'true'
 end

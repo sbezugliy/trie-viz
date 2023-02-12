@@ -29,5 +29,5 @@ gem 'simplecov'
 gem 'simplecov-console'
 gem 'sinatra'
 gem 'sinatra-contrib'
-gem 'trie-substring-search'
 gem 'webdrivers'
+gem 'trie-substring-search', git: "https://github.com/sbezugliy/trie-substring-search.git", tag: "v0.1.0.1"

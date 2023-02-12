@@ -1,0 +1,70 @@
+h1 three.js test
+br
+
+script src="javascripts/three.min.js"
+javascript: 
+
+  // Textures
+
+  function sceneTexture() {
+    const texture = new THREE.TextureLoader().load( "images/scene.jpg" );
+    texture.wrapS = THREE.RepeatWrapping;
+    texture.wrapT = THREE.RepeatWrapping;
+    texture.repeat.set( 50, 50 );
+    return texture;
+  };
+  // Elements
+
+  function renderCube() {
+    const geometry = new THREE.BoxGeometry( 1, 1, 1 );
+    const material = new THREE.MeshBasicMaterial( { color: 0x049ef4 } );
+    return new THREE.Mesh( geometry, material );
+  }
+
+  const cube = renderCube();
+
+  // Scene and camera
+
+  function renderScene(elements) {
+    const scene = new THREE.Scene();
+    
+    const light = new THREE.PointLight( 0xff0000, 1, 100, {castShadow: true, shadow: 0.1} );
+    light.position.set( 0, 0, 10 );
+    scene.add( light );
+    scene.add( light );
+    scene.background = sceneTexture();
+    scene.backgroundBlurriness = 0.5;
+    elements.forEach((element) => {
+      scene.add( element );
+    });
+    return scene;
+  }
+
+  // Rendering scene with elements
+
+  function setCamera() {
+    const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+    camera.position.z = 5;
+    return camera;
+  }
+
+  const renderer = new THREE.WebGLRenderer();
+
+  renderer.setSize( window.innerWidth, window.innerHeight )
+  document.body.appendChild( renderer.domElement );
+
+  function animate() {
+    requestAnimationFrame( animate );
+
+    cube.rotation.x += 0.01;
+    cube.rotation.y += 0.01;
+
+    renderer.render( 
+      renderScene([
+        cube
+      ]), 
+      setCamera() 
+    );
+  }
+
+  animate();

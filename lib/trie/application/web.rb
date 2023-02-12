@@ -42,6 +42,10 @@ class Web < Sinatra::Base
     slim :dictionary
   end
 
+  get '/render_3d', provides: :html do
+    slim :render_3d
+  end
+
   post '/dictionary', provides: :html do
     image_name = 'trie.png'
     diagram_path = File.join(settings.public_folder, 'images', image_name)
