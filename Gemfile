@@ -31,3 +31,6 @@ gem 'sinatra-contrib'
 gem 'slim'
 gem 'trie-substring-search', git: 'https://github.com/sbezugliy/trie-substring-search.git', tag: 'v0.1.0.1'
 gem 'webdrivers'
+
+plugin 'diffend'
+gem 'diffend-monitor', require: %w[diffend/monitor]

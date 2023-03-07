@@ -89,3 +89,18 @@
 [2023-02-13 00:35:42 +0200 Sergejs-iMac.local (7529)] INFO : Finished instrumentation
 [2023-02-13 00:35:45 +0200 Sergejs-iMac.local (7529)] INFO : Reporting to: https://rpm.eu.newrelic.com/accounts/3812663/applications/496398756
 [2023-02-13 00:38:30 +0200 Sergejs-iMac.local (7529)] INFO : Starting Agent shutdown
+[2023-03-07 17:34:27 +0200 Sergejs-iMac.local (43911)] INFO : Starting the New Relic agent version 8.16.0 in "development" environment.
+[2023-03-07 17:34:27 +0200 Sergejs-iMac.local (43911)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2023-03-07 17:34:27 +0200 Sergejs-iMac.local (43911)] INFO : Reading configuration from newrelic.yml (/Users/sergey_bezugliy/workspace_codenv.top/trie-automaton/trie-viz)
+[2023-03-07 17:34:27 +0200 Sergejs-iMac.local (43911)] INFO : Environment: development
+[2023-03-07 17:34:27 +0200 Sergejs-iMac.local (43911)] INFO : No known dispatcher detected.
+[2023-03-07 17:34:27 +0200 Sergejs-iMac.local (43911)] INFO : Application: trie-viz (Development)
+[2023-03-07 17:34:27 +0200 Sergejs-iMac.local (43911)] INFO : Installing Logger instrumentation
+[2023-03-07 17:34:27 +0200 Sergejs-iMac.local (43911)] INFO : Installing New Relic supported Logger instrumentation using Prepend
+[2023-03-07 17:34:27 +0200 Sergejs-iMac.local (43911)] INFO : Installing Net:HTTP Wrappers
+[2023-03-07 17:34:27 +0200 Sergejs-iMac.local (43911)] INFO : Installing New Relic supported NetHTTP instrumentation using Prepend
+[2023-03-07 17:34:27 +0200 Sergejs-iMac.local (43911)] INFO : Installing Thread Instrumentation
+[2023-03-07 17:34:27 +0200 Sergejs-iMac.local (43911)] INFO : Installing New Relic supported MonitoredThread instrumentation using Prepend
+[2023-03-07 17:34:27 +0200 Sergejs-iMac.local (43911)] INFO : Finished instrumentation
+[2023-03-07 17:34:33 +0200 Sergejs-iMac.local (43911)] INFO : Reporting to: https://rpm.eu.newrelic.com/accounts/3812663/applications/496398756
+[2023-03-07 17:34:56 +0200 Sergejs-iMac.local (43911)] INFO : Starting Agent shutdown
