@@ -4,6 +4,8 @@
 
 [![codecov](https://codecov.io/gh/sbezugliy/trie-viz/branch/master/graph/badge.svg)](https://codecov.io/gh/sbezugliy/trie-viz)
 
+![Sergey Bezugliy GitHub stats](https://github-readme-stats.vercel.app/api?username=sbezugliy&show_icons=true&theme=radical)
+
 Running website: https://trie-viz.herokuapp.com
 
 ## Installation

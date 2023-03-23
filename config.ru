@@ -11,4 +11,7 @@ require 'trie/viz'
 
 require 'trie/application/web'
 
-run Rack::URLMap.new '/' => Web.new
+run Rack::URLMap.new(
+  '/' => Web.new,
+  '/api' => Api.new
+)
